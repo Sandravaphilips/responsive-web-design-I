@@ -1,4 +1,3 @@
-/* Use your own code or past solution for Great Idea Web Page CSS here! */
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -65,47 +64,43 @@ h1, h2, h3, h4, h5 {
 }
 
 /* Copy and paste your work from yesterday here and start to refactor into flexbox */
-/* container */
+/* CONTAINER */
 .container {
 	max-width: 900px;
 	margin: 0 auto;
-	/* background-color: blue; */
+	/* background-color: lightblue; */
 	display: flex;
 	flex-direction: column;
-	padding: 20px;
-	justify-content: center; 
-}	
-
-/* NAVIGATION */
-nav {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	align-items: center;
-	margin-bottom: 30px;
-}
-nav section {
-    display:flex;
+    padding: 20px;
     justify-content: space-between;
-}
+ }
 
-nav hr {
-    display:none;
-}
+ /* NAVIGATION */
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+ }
+ nav section {
+     display: flex;
+     
+ }
+ nav a {
+     text-decoration: none;
+     color: lightgray;
+     margin-right: 16%;
+ }
 
-@media (max-width: 800px) {
+ nav hr {
+     display: none;
+ }
+
+ @media (max-width: 800px) {
     nav {
         flex-direction: column-reverse;
     }
-}
-
-nav a {
-	text-decoration: none;
-    color: lightgray;
-    margin-right: 60px;
-}
-
-@media (max-width: 800px) {
     nav section {
         display: flex;
         justify-content: space-between;
@@ -120,7 +115,8 @@ nav a {
 @media (max-width: 500px) {
     nav section {
        flex-direction: column;
-       margin-top: 0px;   
+       margin-top: 0px; 
+       text-align: center;  
     }
     
     nav hr {
@@ -136,106 +132,106 @@ nav a {
 }
 
 /* HEADER */
-header {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	align-items: center;
-	margin-bottom: 30px;
+/* header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+} */
+header figure img {
+    width: 100%;
 }
 header section {
-	text-align: center; 
-	margin-left: 90px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
-header section h1 {
-	 font-size: 60px; 
-
-}
-
-@media (max-width: 800px) {
-    header figure {
-        display: none;
-    }
-    header {
-        justify-content: center;
-    }
-    header section {
-        margin-left: 0px;
-    }
+h1 {
+    font-size: 20px;
 }
 
 /* HORIZONTAL LINE */
 hr {
-	width: 100%;
-	border: 1px solid black;
-} 
+    width: 100%;
+    border: 1px solid lightgray;
+}
+#dark-grey {
+    border: 1px solid gray;
+}
 
-/* FIRST CONTENT */
-.first-content {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	margin-top: 30px;
-	margin-bottom: 30px;
+/* MAIN */
+ .first-content, .second-content, .third-content {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    justify-content: space-between;
+    margin-bottom: 20px;
 }
 
 @media (max-width: 500px) {
-    .first-content {
+    .first-content, .second-content, .third-content {
         flex-direction: column;
+        margin: 0px;
+        
     }
-    .first-content section:first-child {
-        margin-bottom: 30px;
-    }
+    
 }
 
-/* FIGURE */
-main figure img {
-	width: 100%;
-}
-
-/* SECOND CONTENT */
-.second-content {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	margin-top: 30px;
-	margin-bottom: 30px;
+main div section {
+    border: 1px solid black;
+    padding: 10px;
+    width: 48%;
+    background-color: lightgray
 }
 
 @media (max-width: 500px) {
-    .second-content {
-        flex-direction: column;
+    main div section {
+        border: none;
+        width: 100%;
+        background-color: white;
+        padding-left: 0px;
     }
-    .second-content section:first-child {
-        margin-bottom: 30px;
-    }
-    .second-content section:last-child {
-        margin-top: 30px;
-    }
+}
+section button {
+    margin-top: 20px;
 }
 
 /* FOOTER */
 footer {
-	margin-top: 30px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
 }
-footer p {
-	
-	margin-top: 10px;
-	
+footer section, footer figure {
+    width: 48%;
+    
 }
-footer>p {
-	text-align: center;
-	margin-top: 30px;
+
+@media (max-width: 500px) {
+    footer {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    footer section {
+        width: 100%;
+        
+    }
+    
+    footer figure {
+        margin-top: 20px;
+    }
 }
-/* footer address {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	border: 1px solid black;
-} */
+footer ul {
+    margin-top: 20px;
+}
+ul li {
+    list-style-position: inside;
+    list-style-type: square;
+}
 
-
-	
- 
- 
-
+/* COPYRIGHT */
+.container >p {
+    text-align: center;
+    margin-top: 50px;
+}
