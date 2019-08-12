@@ -1,0 +1,237 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Set every element's box-sizing to border-box */
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Bangers', cursive;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+/* Copy and paste your work from yesterday here and start to refactor into flexbox */
+/* CONTAINER */
+.container {
+	max-width: 900px;
+	margin: 0 auto;
+	/* background-color: lightblue; */
+	display: flex;
+	flex-direction: column;
+    padding: 20px;
+    justify-content: space-between;
+ }
+
+ /* NAVIGATION */
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+ }
+ nav section {
+     display: flex;
+     
+ }
+ nav a {
+     text-decoration: none;
+     color: lightgray;
+     margin-right: 16%;
+ }
+
+ nav hr {
+     display: none;
+ }
+
+ @media (max-width: 800px) {
+    nav {
+        flex-direction: column-reverse;
+    }
+    nav section {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+        text-align: center;
+    }
+    nav a {
+        margin-right: 40px;
+    }
+}
+
+@media (max-width: 500px) {
+    nav section {
+       flex-direction: column;
+       margin-top: 0px; 
+       text-align: center;  
+    }
+    
+    nav hr {
+        display: block;
+        overflow: hidden;
+        border: 1px solid lightgray;
+        width: 500px;
+        
+    }
+    .darkgrey {
+        border: 1px solid darkgray;
+    }
+}
+
+/* HEADER */
+/* header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+} */
+header figure img {
+    width: 100%;
+}
+header section {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+h1 {
+    font-size: 20px;
+}
+
+/* HORIZONTAL LINE */
+hr {
+    width: 100%;
+    border: 1px solid lightgray;
+}
+#dark-grey {
+    border: 1px solid gray;
+}
+
+/* MAIN */
+ .first-content, .second-content, .third-content {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 500px) {
+    .first-content, .second-content, .third-content {
+        flex-direction: column;
+        margin: 0px;
+        
+    }
+    
+}
+
+main div section {
+    border: 1px solid black;
+    padding: 10px;
+    width: 48%;
+    background-color: lightgray
+}
+
+@media (max-width: 500px) {
+    main div section {
+        border: none;
+        width: 100%;
+        background-color: white;
+        padding-left: 0px;
+    }
+}
+section button {
+    margin-top: 20px;
+}
+
+/* FOOTER */
+footer {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+}
+footer section, footer figure {
+    width: 48%;
+    
+}
+
+@media (max-width: 500px) {
+    footer {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    footer section {
+        width: 100%;
+        
+    }
+    
+    footer figure {
+        margin-top: 20px;
+    }
+}
+footer ul {
+    margin-top: 20px;
+}
+ul li {
+    list-style-position: inside;
+    list-style-type: square;
+}
+
+/* COPYRIGHT */
+.container >p {
+    text-align: center;
+    margin-top: 50px;
+}
